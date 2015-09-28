@@ -9,13 +9,25 @@ namespace eRestaraunt.Framework.Entities
 {
     public class Reservations
     {
+        //Constraints for valid reservation values
+        // A = arrived, b = booked, c = complete, n = no show, x = cancelled
+        public const string Arrived = "A";
+        public const string Booked = "B";
+        public const string Complete = "C";
+        public const string NoShow = "N";
+        public const string Cancelled = "X";
         [Key]
         public int ReservationID { get; set; }
         public string CustomerName { get; set; }
         public DateTime ReservationDate { get; set; }
+        [Range(1, 16)]
         public int NumberInParty { get; set; }
+        [StringLength(15)]
         public string ContactPhone { get; set; }
+        //TODO: (in BLL) Validate acceptable values using constants (see above)
+        [Required, StringLength(1)]
         public string ReservatrionStatus { get; set; }
+        [StringLength(1)]
         public string EventCode { get; set; }
 
         //Navigation Properties
