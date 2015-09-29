@@ -48,8 +48,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\RestaurantAdminController.cs" />
     <Compile Include="BLL\TempController.cs" />
     <Compile Include="DAL\RestarauntContext.cs" />
+    <Compile Include="Entities\BillItems.cs" />
     <Compile Include="Entities\Bills.cs" />
     <Compile Include="Entities\Item.cs" />
     <Compile Include="Entities\MenuCategory.cs" />
