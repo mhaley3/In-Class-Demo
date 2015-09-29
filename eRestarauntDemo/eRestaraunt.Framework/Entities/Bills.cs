@@ -24,6 +24,11 @@ namespace eRestaraunt.Framework.Entities
         public int ReservationID { get; set; }
         public string Comment { get; set; }
 
+        //Navigation Properties
+        public virtual ICollection<BillItems> Items { get; set; }
+        public virtual Waiters Waiter { get; set; }
+        public virtual Tables Table { get; set; }
+
         public Bills()
         {
             BillDate = DateTime.Now;
