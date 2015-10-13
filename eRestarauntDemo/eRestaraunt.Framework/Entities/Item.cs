@@ -16,11 +16,12 @@ namespace eRestaraunt.Framework.Entities
 
         public string Description { get; set; }
 
+        //use decimal for the sql money data type
         [Range(.01, 50)]
-        public double CurrentPrice { get; set; }
+        public decimal CurrentPrice { get; set; }
 
         [Range(.01, 30)]
-        public double CurrentCost { get; set; }
+        public decimal CurrentCost { get; set; }
         public bool Active { get; set; }
 
         [Range(0, int.MaxValue)]
